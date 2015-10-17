@@ -4,13 +4,25 @@
     <title>About Me</title>
     <link rel="stylesheet" href="resources/layout.css" type="text/css">
     <script src="resources/javascript.js" type="text/javascript" charset="utf-8"></script>
+
+    <script type="text/javascript">
+        function replaceName() {
+          var myNewName = window.prompt('Pick a new name!');
+          document.getElementById('user-name').innerHTML = myNewName;
+      }
+
+      document.onclick = replaceName;
+      
+    </script>
+
+
   </head>
   <body>
 
     <div id="header" class="content">
       <h1>About Me</h1>
       <p>
-        My name is Scott and I'm here.
+        My name is <span id="user-name">Scott </span> and I'm here.
       </p>
     </div>
     
